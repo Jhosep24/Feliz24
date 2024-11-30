@@ -1,0 +1,281 @@
+/* Estilo general */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 100vh; /* Asegura que el cuerpo se ocupe todo el alto */
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    flex-direction: column;
+    padding-bottom: 60px; /* Espacio al pie de la página */
+  }
+  
+  .container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    overflow: auto; /* Permite que el contenido se desplace si es necesario */
+    height: 80vh; /* Ajustamos la altura para que el contenido no sobrepase el tamaño de la pantalla */
+  }
+  
+  .title {
+    font-size: 2.5em;
+    color: #ac13f3;
+    font-weight: 700;
+    animation: fadeIn 2s ease-out;
+    margin-bottom: 20px;
+  }
+  
+  .letter {
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: #333;
+    font-weight: 400;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: letterFadeIn 3s ease-out;
+    overflow-y: auto; /* Permite desplazamiento en la carta */
+  }
+  
+  #loveLetter {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: left;
+  }
+  
+  /* Efecto de FadeIn para el título */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Efecto de escritura */
+  @keyframes letterFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Animación para el botón */
+  .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background: #8a2be2;
+    color: white;
+    border-radius: 25px;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .back-link:hover {
+    background: #7a00df;
+    transform: scale(1.1);
+  }
+  
+  /* Animación de partículas flotantes (corazones) */
+  @keyframes floatingHearts {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(50px, -50px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  .floating-hearts {
+    position: absolute;
+    top: 20px;
+    right: 50%;
+    left: 50%;
+    font-size: 2em;
+    color: rgba(255, 0, 0, 0.7);
+    animation: floatingHearts 5s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+  
+  .floating-hearts:nth-child(2) {
+    animation-delay: 4s;
+  }
+  
+  .floating-hearts:nth-child(3) {
+    animation-delay: 6s;
+  }
+  
+  /* --- Media Queries para pantallas pequeñas --- */
+  
+  /* Para pantallas de 480px o menos */
+  @media (max-width: 480px) {
+    .container {
+        padding: 30px;  /* Aumentamos el padding para evitar que el contenido quede pegado a las esquinas */
+        width: 75%; /* Asegura que el contenedor no ocupe toda la pantalla, dejando espacio en los bordes */
+      }
+    .title {
+      font-size: 1.8em;
+    }
+  
+    .letter {
+      font-size: 1.2em;
+      padding: 15px;
+      max-width: 100%;
+    }
+  
+    .back-link {
+      font-size: 1em;
+      padding: 8px 20px;
+    }
+    .romantic-title {
+        font-size: 1.8em;
+        padding: 8px 15px;
+      }
+  }
+  
+  /* Para pantallas de 760px o menos */
+  @media (max-width: 760px) {
+    .title {
+      font-size: 2.2em;
+    }
+  
+    .letter {
+      font-size: 1.3em;
+      padding: 18px;
+      max-width: 95%;
+    }
+  
+    .back-link {
+      font-size: 1.1em;
+      padding: 10px 25px;
+    }
+  }
+  
+
+  /* Título romántico fuera de la carta */
+.title-container {
+    text-align: center;
+    margin: 30px 0;
+    animation: fadeIn 2s ease-out; /* Animación de entrada para que aparezca suavemente */
+  }
+  
+  /* Estilos y animaciones del título romántico */
+  .romantic-title {
+    font-size: 2.5em;
+    font-family: 'Poppins', sans-serif;
+    color: #ff3366; /* Color vibrante para que se destaque */
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 15px rgba(255, 255, 255, 0.5); /* Resplandor suave */
+    animation: heartbeat 1.5s infinite, colorChange 4s infinite; /* Animaciones para latir y cambiar colores */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  
+  /* Animación para latir (crece y encoge) */
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Animación para el cambio de color */
+  @keyframes colorChange {
+    0% {
+      color: #ff3366; /* Rojo vibrante */
+    }
+    25% {
+      color: #ff9933; /* Naranja cálido */
+    }
+    50% {
+      color: #d30000; /* Amarillo brillante */
+    }
+    75% {
+      color: #1100ff; /* Verde suave */
+    }
+    100% {
+      color: #6708ff; /* Rojo vibrante */
+    }
+  }
+  
+  /* Animación para el desvanecimiento inicial */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+  /* Estilos para el contenedor de música */
+.music-container {
+    text-align: center;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-out;
+    padding-bottom: 20px; /* Espacio al pie de la página */
+  }
+  
+  #musicButton {
+    background-color: #ff3366;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #musicButton:hover {
+    background-color: #ff6699;
+    transform: scale(1.1);
+  }
+  
+  /* Media Queries para pantallas pequeñas */
+  @media (max-width: 480px) {
+    .romantic-title {
+      font-size: 1.8em;
+      padding: 8px 15px;
+    }
+  
+    #musicButton {
+      font-size: 1em;
+      padding: 8px 15px;
+    }
+  }

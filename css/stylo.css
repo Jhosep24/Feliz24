@@ -1,0 +1,462 @@
+/* Fondo general */
+body {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden; /* Solo oculta desbordamiento horizontal */
+    margin: 0;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Título principal */
+  /* Estilos para el título de celebración */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+.celebration-title {
+  font-size: 2.4em; /* Tamaño grande para destacar */
+  background: linear-gradient(to right, #8a2be2, #d62dd1, #ff4ee2); /* Degradado en tonos violetas */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif; /* Fuente moderna y audaz */
+  letter-spacing: 3px;
+  animation: heartbeat 2s infinite; /* Aplicar la animación al título */
+  padding: 10px;
+  line-height: 1.2;
+  display: inline-block;
+  position: relative;
+}
+
+/* Estilos del emoji */
+.emoji {
+  font-size: 2.5em; /* Tamaño grande para el emoji */
+  display: inline-block;
+  animation: heartbeat 2s infinite; /* Aplicar la animación al emoji */
+  margin-left: 10px; /* Separar un poco el emoji del texto */
+}
+
+/* Efecto de latido (heartbeat) */
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+}
+
+/* Efecto de hover para interacción sutil */
+.celebration-title:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+
+
+
+  
+
+
+
+
+  /* Pergamino */
+  .dedication {
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+  .dedication p:first-child {
+    font-size: 1.2em; /* El primer párrafo ligeramente más grande */
+    font-weight: 600;
+    color: #ac13f3; /* Color suave pero elegante para destacar el saludo */
+    animation: heartbeat 1.5s ease-in-out infinite; /* Animación de latido */
+  }
+  
+  /* Efecto de latido (heartbeat) */
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+      transform: scale(1.1); /* Aumenta el tamaño al 110% */
+    }
+  }
+  
+
+.dedication p:nth-child(2) {
+  font-size: 1em;
+  margin-top: 15px;
+  color: #d54e8e; /* Color suave y romántico para el mensaje principal */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Efecto suave de resplandor */
+}
+
+.dedication p:last-child {
+  font-size: 0.9em;
+  font-style: italic;
+  color: #000f97; /* Color morado suave para el cierre */
+}
+
+.dedication .scroll {
+  animation: fadeIn 2s ease-in-out; /* Animación de aparición suave */
+}
+
+/* Efecto de animación de aparición */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Corazones flotantes */
+@keyframes floatHearts {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(15deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-15deg);
+  }
+}
+
+.dedication .hearts {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 2em;
+  animation: floatHearts 4s ease-in-out infinite;
+}
+  /* Animaciones de mensajes */
+  .messages .message {
+    font-size: 1.5em;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeInUp 2s ease-in-out forwards;
+  }
+  
+  .messages .message:nth-child(1) { animation-delay: 1s; }
+  .messages .message:nth-child(2) { animation-delay: 3s; }
+  .messages .message:nth-child(3) { animation-delay: 5s; }
+  .messages .message:nth-child(4) { animation-delay: 7s; }
+  
+ /* Estilo para los corazones flotantes */
+/* Estilo para los corazones flotantes */
+.dedication {
+  position: relative; /* Posiciona los elementos dentro de la dedicatoria */
+  overflow: hidden; /* Evita que los corazones se salgan del área del contenedor */
+  text-align: center;
+  margin-bottom: 100px; /* Asegura que los corazones estén por debajo del texto */
+}
+
+/* Contenedor de los corazones flotantes (ubicado fuera de la dedicatoria) */
+.hearts {
+  position: fixed; /* Fijamos el contenedor de los corazones a toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Los corazones no interfieren con el clic */
+  z-index: 1; /* Asegura que los corazones se muestren por debajo del texto */
+}
+
+/* Estilo para los corazones flotantes */
+.heart {
+  position: absolute;
+  font-size: 2em;
+  color: red;
+  animation: floatHeart 6s ease-in infinite; /* Tiempo de animación extendido */
+}
+
+/* Animación de los corazones */
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-200px) scale(1.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-400px) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Estilo para el texto dentro de la dedicatoria */
+.dedication .scroll {
+  font-size: 1.5em;
+  margin: 20px;
+}
+
+
+
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  #musicButton {
+    font-size: 1.2em; /* Tamaño de la fuente */
+    padding: 10px 20px; /* Espaciado interno para hacerlo más grande */
+    background-color: #ff3855; /* Color de fondo bonito para el botón */
+    color: white; /* Color de la letra */
+    border: 3px solid #ff0000; /* Borde blanco alrededor del botón */
+    border-radius: 10px; /* Bordes redondeados para hacerlo más suave */
+    cursor: pointer; /* Muestra el cursor como un puntero */
+    transition: all 0.3s ease; /* Efecto suave al pasar el mouse */
+    display: block; /* Asegura que el botón esté debajo de los emojis */
+    margin: 10px auto; /* Centra el botón horizontalmente con margen automático */
+    width: auto; /* Ajusta el tamaño del botón al contenido */
+    text-align: center; /* Centra el texto del botón */
+  }
+  
+  #musicButton:hover {
+    background-color: #ff2a4f; /* Cambia el color de fondo al pasar el mouse */
+    border-color: #ff3855; /* Cambia el color del borde al pasar el mouse */
+    transform: scale(1.1); /* Aumenta el tamaño del botón al pasar el mouse */
+  }
+  
+  
+  
+  /* Botón interactivo */
+  button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff194e;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ff637b;
+  }
+  
+/* Estilos para el Modal */
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1000; /* Para que el modal esté por encima del contenido */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Ajuste para el verdadero centro */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
+    overflow: auto; /* Asegura que el contenido del modal se pueda desplazar si es necesario */
+    padding-top: 100px;
+    text-align: center;
+    align-items: center; /* Centrar contenido horizontalmente */
+  }
+  
+  /* Contenido del Modal */
+  .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  /* Estilos para el encabezado del modal */
+  .modal-content h2 {
+    font-size: 2em;
+    color: #ff6f91;
+    margin-bottom: 20px;
+  }
+  
+  /* Botones dentro del modal */
+  .modal-button {
+    display: block;
+    background-color: #ff6f91;
+    color: #fff;
+    padding: 10px 15px; /* Ajuste de relleno para hacerlos más pequeños */
+    margin: 10px auto; /* Centrados y con margen entre ellos */
+    text-decoration: none;
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 25px;
+    width: 80%; /* Ancho ajustado */
+  max-width: 500px; /* Ancho máximo */
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-button:hover {
+    background-color: #ff3855;
+  }
+  
+  /* Estilo del botón Salir en la parte inferior */
+ /* Botón Salir centrado */
+.exit-btn {
+  background-color: #ff3855;
+  margin-top: 20px;
+  align-self: center; /* Centrar el botón */
+  width: 50%; /* Ajustar el ancho según necesidad */
+  max-width: 100px;
+}
+
+.exit-btn:hover {
+  background-color: #ff6f91;
+}
+  /* Botón para cerrar el modal */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2em;
+    color: #ff6f91;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #ff3855;
+  }
+  
+
+  /* Media Queries para pantallas pequeñas (dispositivos móviles) */
+@media (max-width: 767px) {
+    /* Ajuste de tamaño del modal */
+    .modal-content {
+        width: 90%; /* Hacer el modal más estrecho en pantallas pequeñas */
+        padding: 20px; /* Menos espacio interior */
+    }
+
+    /* Tamaño de la fuente en pantallas pequeñas */
+    .modal-content h2 {
+        font-size: 1.8em; /* Reduce el tamaño de fuente del título */
+    }
+
+    /* Botones en pantallas pequeñas */
+    .modal-button {
+        font-size: 1.1em; /* Reducir tamaño de fuente de los botones */
+        padding: 12px; /* Reducir padding de los botones */
+    }
+
+    /* Cerrar el botón */
+    .close {
+        font-size: 1.5em; /* Reducir tamaño del botón de cerrar */
+    }
+}
+
+/* Media Queries para pantallas de 480px (dispositivos más pequeños) */
+@media (max-width: 480px) {
+    /* Ajuste de tamaño del modal */
+    .modal-content {
+        width: 90%; /* Hacer el modal más estrecho en pantallas de 480px */
+        padding: 15px; /* Menos espacio interior */
+    }
+
+    /* Tamaño de la fuente en pantallas de 480px */
+    .modal-content h2 {
+        font-size: 1.6em; /* Reduce el tamaño de fuente del título */
+    }
+
+    /* Botones en pantallas de 480px */
+    .modal-button {
+        font-size: 1.1em; /* Reducir tamaño de fuente de los botones */
+        padding: 10px; /* Reducir padding de los botones */
+    }
+
+    /* Cerrar el botón */
+    .close {
+        font-size: 1.4em; /* Reducir tamaño del botón de cerrar */
+    }
+}
+
+/* Animación de cambio de color */
+@keyframes colorChange {
+  0% {
+    color: #d40000; /* Rojo */
+  }
+  25% {
+    color: #7a00df; /* Amarillo */
+  }
+  50% {
+    color: #a15aff; /* Verde */
+  }
+  75% {
+    color: #001aff; /* Azul */
+  }
+  100% {
+    color: #b600c7; /* Rojo */
+  }
+}
+
+/* Animación de latido */
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+}
+
+/* Estilos del contador */
+.counter p {
+  font-size: 2em; /* Tamaño de fuente grande para destacar */
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  animation: colorChange 3s infinite, heartbeat 2s infinite; /* Animación de cambio de color y latido */
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6); /* Efecto de resplandor */
+}
+
+/* Estilos del contador de días */
+#daysCount {
+  font-size: 2.5em; /* Aumenta el tamaño del número */
+  color: #ff3855; /* Color inicial para el contador */
+  font-weight: bold;
+  animation: colorChange 3s infinite, heartbeat 2s infinite; /* Animación de cambio de color y latido */
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6); /* Efecto de resplandor */
+}
+

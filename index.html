@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Primera Semana ❤️</title>
+  <link rel="stylesheet" href="css/stylo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <!-- Título principal -->
+    <h1 class="celebration-title">¡Feliz Primera Semana, Mi Amor!</h1>
+    <span class="emoji">💖😍😘🥰</span>
+    
+    <!-- Botón de música -->
+    <button id="musicButton" onclick="toggleMusic()">🎶 Reproducir Canción Especial</button>
+    
+    <!-- Dedicatoria con pergamino -->
+    <div class="dedication">
+      <div class="scroll">
+        <p>Mi amorcita Kiara,</p>
+    <p>Desde el momento en que llegaste a mi vida, todo se volvió más brillante. Cada día contigo es una bendición, y cada sonrisa tuya ilumina mi mundo. No hay palabras que puedan describir lo afortunado que me siento de tenerte a mi lado. Eres mi razón de ser, mi fuerza, mi alegría, y mi todo. Te amo con cada rincón de mi ser, más de lo que jamás podré expresar. 💖</p>
+    <p>Gracias por ser tú, por hacerme tan feliz. Siempre juntos, siempre enamorados. Con todo mi amor, Jhosep, tu niño que te adora.</p>
+  </div>
+        <!-- Corazones flotantes -->
+      </div>
+      <div class="hearts"></div>
+
+
+
+    <!-- Mensajes animados -->
+    <!-- Mensajes animados -->
+<div class="messages">
+  <p class="message">Una semana juntos ha sido como un sueño hecho realidad, cada día contigo es mi felicidad. 💕</p>
+  <p class="message">Cada momento a tu lado es el más valioso, eres mi razón para soñar y sonreír. 🌹</p>
+  <p class="message">Tu amor me llena el alma de alegría, no hay un solo día en que no me haga sentir afortunado. 💫</p>
+  <p class="message">Gracias por ser mi todo, por darme tanto amor y por hacer que mi corazón lata más fuerte cada día. 💖</p>
+</div>
+
+
+    <!-- Contador de días -->
+    <!-- Contador de días -->
+<div class="counter">
+  <p>Mi amor, cada uno de estos <span id="daysCount"></span> días juntos ha sido un regalo. 💖 ¡Te amo más de lo que imaginas! 🎉</p>
+</div>
+
+
+    <!-- Botón para descubrir la sorpresa -->
+    <div class="surprise-links">
+      <button onclick="showSurprise()">¡¡¡Descubre las sorpresas!!! 💖</button>
+    </div>
+  </div>
+
+
+  <!-- Fondo nublado detrás del modal -->
+<div id="modalBackdrop" class="modal-backdrop"></div>
+  <!-- Modal de sorpresa -->
+  <!-- Modal de sorpresa -->
+<div id="surpriseModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>🎁 ¡Sorpresas Especiales! 🎁</h2>
+      <div class="surprise-buttons">
+        <a href="carta.html" class="modal-button">💌 Carta de Amor</a>
+        <a href="mensajes.html" class="modal-button">💬 Mensajes</a>
+        <a href="estrella.html" class="modal-button">⭐ Estrellas </a>
+        <a href="video.html" class="modal-button">🎥 Un Video Solo para Ti 💖</a>
+        <a href="agradecer.html" class="modal-button">🙏 Agradecimiento</a>
+      </div>
+      <!-- Botón Salir -->
+      <button class="modal-button exit-btn" onclick="closeModal()">Salir</button>
+    </div>
+  </div>
+
+
+  <audio id="backgroundMusic" loop>
+    <source src="music/teamo.mp3" type="audio/mp3">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <script src="js/function.js"></script>
+</body>
+</html>

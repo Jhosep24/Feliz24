@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensajes de Amor 💌</title>
+  <link rel="stylesheet" href="css/mensajes.css">
+</head>
+<body>
+     <!-- Contenedor de los corazones flotantes -->
+  <div class="floating-hearts"></div>
+  
+  <div class="messages-container">
+    <h1 class="messages-title">Mensajes de Amor Para Ti 💖 mi osita preciosa🥰 te amoo 💖</h1>
+    <div class="message-box">
+      <p id="typedMessage"></p>
+    </div>
+
+    <div class="animated-message">
+      <p>"Mi amor, eres mi razón de sonreír todos los días. 🌟 Cada pensamiento sobre ti ilumina mi corazón y me hace sentir más feliz de lo que nunca imaginé. Eres mi todo, mi alegría, mi compañera, mi confidente. 💖 No hay palabras suficientes para describir lo agradecido que estoy por tenerte en mi vida. Te amo con todo mi ser, y siempre estaré aquí para ti, hoy y siempre. 💫"</p>
+    </div>
+    
+    
+    
+    <a href="index.html" class="back-link">Volver al Inicio</a>
+  </div>
+  <audio id="backgroundMusic" loop>
+    <source src="music/Pero Te Conocí.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('backgroundMusic').play();
+    });
+  </script>
+  <script src="js/mensajes.js"></script>
+</body>
+</html>

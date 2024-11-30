@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrellas de Nuestra Relación</title>
+  <link rel="stylesheet" href="css/estrella.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Juntos Hacemos Brillar las Estrellas del Universo 💖💫</h1>
+    
+    <!-- Mensaje inicial con animación -->
+    <div id="mensaje-inicial" class="mensaje-inicial">
+      ✨ "Cada momento a tu lado es un regalo que la vida me dio, y cada día contigo es una nueva razón para sonreír. 💖💫 Eres mi todo, mi amor mi princesa te amooo💖. 🌹"
+    </div>
+    
+
+    <!-- Guía animada -->
+    <p id="guia-texto" class="guia-texto">¡Cada estrella que tocas es un pedazo de mi amor por ti, ¡no dejes de descubrirlas! 💞! 🌟</p>
+
+    <div class="mapa-estrellas">
+      <!-- Las estrellas se generarán dinámicamente -->
+    </div>
+<!-- Frase tierna con animación -->
+<div id="frase-tierna" class="frase-tierna">
+  <p>Te amo más de lo que las palabras pueden expresar, eres mi razón de vivir y mi refugio en este mundo. 🌹💖 Siempre estaré a tu lado, hoy, mañana y siempre, porque no hay nada más hermoso que tenerte a ti. 💫 te amo mi princesa Kiara🥰💖</p>
+</div>
+
+
+    <div id="modal-info" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span> <!-- Botón de cerrar -->
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <a href="index.html" class="back-link">Volver al Inicio</a>
+  </div>
+  <audio id="backgroundMusic" loop>
+    <source src="music/perfect.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('backgroundMusic').play();
+    });
+  </script>
+
+  <script src="js/estrella.js"></script>
+</body>
+</html>
