@@ -225,6 +225,11 @@ body {
       .modal-content p {
         font-size: 16px;
       }
+      .title-container {
+        padding: 10px;
+        margin-top: 20px; /* Asegura que el título tenga un espacio adecuado */
+        height: 200px;
+      }
 }
 
 /* Estilo del cuadro de texto */
@@ -261,8 +266,8 @@ body {
 /* Contenedor que mantiene el flujo del documento */
 /* Contenedor que mantiene el flujo del documento */
 .title-container {
-    position: relative; /* Contenedor relativo para aislar el latido */
-    height: 185px; /* Ajuste para el tamaño del título */
+    
+    height: 200px; /* Ajuste para el tamaño del título */
     overflow: visible; /* Permite que el contenido pueda expandirse */
     padding-top: 20px;
     margin-bottom: 30px;
